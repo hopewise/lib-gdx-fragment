@@ -18,7 +18,7 @@ public class AndroidLauncher extends FragmentActivity implements Callbacks {
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-
+		setContentView(R.layout.activity_main);
 		// 6. Finally, replace the AndroidLauncher activity content with the Libgdx Fragment.
 		fragment = new GameFragment();
 		FragmentTransaction trans = getSupportFragmentManager().beginTransaction();
