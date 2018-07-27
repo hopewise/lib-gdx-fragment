@@ -19,11 +19,14 @@ public class MyGdxGame extends ApplicationAdapter implements InputProcessor {
 	private ModelInstance modelInstance;
 	private Environment environment;
 	private ICreator creator;
-	public MyGdxGame(ICreator aCreator){
+    public Integer dir;
+
+    public MyGdxGame(ICreator aCreator){
 		creator= aCreator;
 	}
 	@Override
 	public void create () {
+		dir= 1;
 		camera = new PerspectiveCamera(75,Gdx.graphics.getWidth(),Gdx.graphics.getHeight());
 		camera.position.set(0f, 0f, 3f);
 		camera.lookAt(0f,0f,0f);
@@ -55,7 +58,7 @@ public class MyGdxGame extends ApplicationAdapter implements InputProcessor {
 	}
 
 	public void rotate(){
-		camera.rotateAround(new Vector3(0f, 0f, 0f), new Vector3(0f, 1f, 0f), 1f);
+		camera.rotateAround(new Vector3(0f, 0f, 0f), new Vector3(0f, 1f, 0f), 1f * dir);
 	}
 
 	@Override
