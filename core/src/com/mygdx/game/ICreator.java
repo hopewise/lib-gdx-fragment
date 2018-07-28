@@ -1,5 +1,5 @@
 package com.mygdx.game;
 
-interface ICreator {
+public interface ICreator {
     void LibGDXInied();
 }

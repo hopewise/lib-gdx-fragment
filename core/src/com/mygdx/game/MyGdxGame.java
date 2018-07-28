@@ -43,6 +43,7 @@ public class MyGdxGame extends ApplicationAdapter implements InputProcessor {
 		environment.set(new ColorAttribute(ColorAttribute.AmbientLight,0.8f,0.8f,0.8f,1f));
 
 		Gdx.input.setInputProcessor(this);
+		if (creator!= null)
 		creator.LibGDXInied();
 	}
 
