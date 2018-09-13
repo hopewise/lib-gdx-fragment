@@ -65,7 +65,7 @@ public class AndroidLauncher extends FragmentActivity implements Callbacks, Blan
 							   }
 						   }
 					, 1
-					, 0.005f
+					, 0.01f
 			);
 		}
 
